@@ -10,25 +10,6 @@ package com.mycompany.Exercicio2;
  */
 public class ContaPoupanca extends Conta{
 
-    @Override
-    public void sacar(double valor) {
-        super.saldo =  super.saldo - valor;
-        System.out.println("Você sacou R$:" + valor);
-        System.out.println("Saldo atual R$:" + super.saldo);
-    }
+   
 
-    @Override
-    public void depositar(double valor) {
-        super.saldo =  super.saldo + valor;
-        System.out.println("Você depositou R$:" + valor);
-        System.out.println("Saldo atual R$:" + super.saldo);
-    }
-
-    @Override
-    public void obterSaldo() {
-        System.out.println("Saldo atual R$:" + super.saldo);
-    }
-        
-
-    
 }

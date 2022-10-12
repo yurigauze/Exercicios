@@ -9,11 +9,21 @@ package com.mycompany.Exercicio2;
  * @author Aluno
  */
 public abstract class Conta {
-    
-    double saldo = 0;
+	double saldo;
 
-    public abstract void sacar(double valor);
-    public abstract void depositar(double valor);
-    public abstract void obterSaldo();
-    
+	public double obterSaldo() {
+		return saldo;
+	}
+
+	public void depositar(double valor) {
+		this.saldo = this.saldo + valor;
+	}
+	
+	public void sacar(double valor) {
+		if((this.saldo - valor) >= 0 )
+			this.saldo = this.saldo - valor;
+		else
+			System.out.println("Saldo Insuficiente");
+	}
+	
 }

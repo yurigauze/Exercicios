@@ -4,18 +4,29 @@
  */
 package com.mycompany.Exercicio2;
 
+import com.mycompany.Exercicio2.ContaCorrente;
+
 /**
  *
  * @author Aluno
  */
 public class Teste {
+
     public static void main(String[] args) {
-        
-        ContaPoupanca conta = new ContaPoupanca() {};
-        conta.depositar(500.00);
-        conta.sacar(45.60);
-        conta.obterSaldo();
-        
+
+        ContaCorrente conta = new ContaCorrente();
+
+        Tributavel[] listaDeTributaveis = new Tributavel[10];
+        listaDeTributaveis[0] = conta;
+        listaDeTributaveis[1] = conta;
+        listaDeTributaveis[2] = conta;
+        listaDeTributaveis[3] = conta;
+        listaDeTributaveis[0] = conta;
+
+        GerenciadorDeImpostoDeRenda gdr = new GerenciadorDeImpostoDeRenda();
+
+        double total = gdr.somarValores(listaDeTributaveis);
+
     }
-    
+
 }

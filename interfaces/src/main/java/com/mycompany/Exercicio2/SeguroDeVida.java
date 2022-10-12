@@ -8,11 +8,20 @@ package com.mycompany.Exercicio2;
  *
  * @author Aluno
  */
-public class SeguroDeVida implements Tributavel{
+public class SeguroDeVida implements Tributavel {
+	public static final double TAXA = 42;
+	private double premio;
 
-    @Override
-    public double calculaTributos() {
-        return 42.00;
-    }   
-    
+	@Override
+	public double calculaTributos() {
+		return TAXA;
+	}
+
+	public double getPremio() {
+		return premio;
+	}
+
+	public void setPremio(double premio) {
+		this.premio = premio;
+	}
 }
